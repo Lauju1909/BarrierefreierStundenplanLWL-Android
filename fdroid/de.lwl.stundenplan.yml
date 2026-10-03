@@ -1,4 +1,4 @@
-﻿Categories:
+Categories:
   - Education
 License: MIT
 AuthorName: Lauju1909
@@ -33,7 +33,17 @@ Builds:
     gradle:
       - assembleRelease
 
+  - versionName: '1.9.26'
+    versionCode: 27
+    commit: v1.9.26
+    subdir: android
+    init:
+      - npm ci
+      - npx cap sync android
+    gradle:
+      - assembleRelease
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.9.14'
-CurrentVersionCode: 26
+CurrentVersion: '1.9.26'
+CurrentVersionCode: 27
