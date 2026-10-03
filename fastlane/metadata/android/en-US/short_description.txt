@@ -1,0 +1,1 @@
+﻿Accessible school timetable for WebUntis – optimized for visually impaired students.

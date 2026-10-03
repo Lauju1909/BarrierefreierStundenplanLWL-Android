@@ -1,0 +1,9 @@
+﻿Barrierefreies WebUntis ermöglicht Schülern und Lehrkräften einen schnellen, barrierefreien Zugriff auf Stundenpläne, Vertretungen und Schulinformationen. Entwickelt mit und für Schüler des LWL-Berufskollegs Soest.
+
+Features:
+- Perfekte TalkBack-Integration mit strukturierter Sprachnavigation
+- Schnellauswahl für Tage, Unterrichtsstunden, Fächer, Räume und Lehrkräfte
+- Vertretungsplananzeige mit direkter Kennzeichnung von Ausfällen und Änderungen
+- Speiseplan- und Mensa-Integration (falls von der Schule unterstützt)
+- Offline-Pufferung für den schnellen Abruf auch bei schlechtem Netz
+- Kontrastmodi für unterschiedliche Sehbedürfnisse

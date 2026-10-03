@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Barrierefreies WebUntis</string>
+    <string name="title_activity_main">Barrierefreies WebUntis</string>
+    <string name="package_name">de.lwl.stundenplan</string>
+    <string name="custom_url_scheme">de.lwl.stundenplan</string>
+</resources>

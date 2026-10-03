@@ -1,0 +1,9 @@
+﻿Barrierefreies WebUntis provides students and teachers with fast, accessible access to school schedules, substitution plans, and announcements via WebUntis. Developed in collaboration with students at the LWL-Berufskolleg Soest.
+
+Features:
+- Full TalkBack screen reader support with intuitive navigation
+- Quick overview of periods, subjects, rooms, and teacher substitutions
+- Clear indications of cancellations and timetable changes
+- Offline caching for quick access even with unstable internet connectivity
+- High-contrast visual modes
+- Free, open source, and privacy respecting

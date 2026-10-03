@@ -1,0 +1,13 @@
+{
+  "appId": "de.lwl.stundenplan",
+  "appName": "Barrierefreies WebUntis",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
