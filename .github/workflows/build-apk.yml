@@ -46,10 +46,15 @@ jobs:
         run: |
           CURRENT_CODE=$(grep "versionCode" android/app/build.gradle | head -1 | tr -dc '0-9')
           CURRENT_NAME=$(grep "versionName" android/app/build.gradle | head -1 | sed -E 's/.*versionName\s+"([^"]+)".*/\1/')
+          git fetch --tags origin --force || true
           NEW_CODE=$((CURRENT_CODE + 1))
           
           IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_NAME"
           NEW_PATCH=$((PATCH + 1))
+          while git rev-parse "v${MAJOR}.${MINOR}.${NEW_PATCH}" >/dev/null 2>&1; do
+            NEW_PATCH=$((NEW_PATCH + 1))
+            NEW_CODE=$((NEW_CODE + 1))
+          done
           NEW_NAME="${MAJOR}.${MINOR}.${NEW_PATCH}"
           
           echo "Bumping versionCode $CURRENT_CODE -> $NEW_CODE"
@@ -84,9 +89,10 @@ jobs:
           [ -f www/app.js ] && git add www/app.js
           [ -f www/index.html ] && git add www/index.html
           git commit -m "chore(release): auto-bump version to v$NEW_NAME [skip ci]"
-          git tag "v$NEW_NAME"
+          git tag -f "v$NEW_NAME"
+          git pull --rebase origin main || true
           git push origin main
-          git push origin "v$NEW_NAME"
+          git push -f origin "v$NEW_NAME"
 
       - name: Set up Java 21
         uses: actions/setup-java@v4
